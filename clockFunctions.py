@@ -1,11 +1,10 @@
 import time
-import Enum
-​
-class Stopwatch(enum.Enum):
+
+class Stopwatch():
     def __init__(self):
         self.end_time = 0
         self.counter = 0
-​
+
     def start(self):
         start_time = time.time()
         while end_time == 0:
@@ -15,14 +14,14 @@ class Stopwatch(enum.Enum):
             print(running_time + "\r", end="")
             self.counter += 1
             time.sleep(1)
-​
+
     def stop(self):
         self.end_time = time.time()
-​
-class Timer(enum.Enum):
+
+class Timer():
     def __init__(self, userSeconds):
         self.userSeconds = userSeconds
-​
+
     def start(self):
         while True:
           try:
